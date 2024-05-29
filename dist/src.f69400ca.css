@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  height: 100%;
+}
+
+.board-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+
+/*# sourceMappingURL=/src.f69400ca.css.map */
