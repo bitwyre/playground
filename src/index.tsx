@@ -17,7 +17,7 @@ import './style.css';
 export function App() {
   return (
     <LocationProvider>
-      <main>
+      <main className='bg-slate-950 text-slate-400'>
         <Router>
           <Route path='/' component={Onboarding} />
           <Route path='/capture-id-options' component={CaptureIdOptions} />
