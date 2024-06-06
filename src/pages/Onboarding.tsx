@@ -4,7 +4,7 @@ import { Container, CopyText, CtaCapture } from '../components';
 export const Onboarding = () => {
   return (
     <section>
-      <Container>
+      <Container className='flex flex-col justify-center items-center'>
         <CopyText
           heading="Let's Verify KYC"
           subheading='Please submit the following documents to verify your identity'
@@ -12,9 +12,9 @@ export const Onboarding = () => {
         <ScanFace
           width={140}
           height={140}
-          className='text-slate-50 mx-auto my-12'
+          className='text-slate-50 mx-auto my-12 md:my-16'
         />
-        <div className='grid gap-4'>
+        <div className='grid gap-4 max-w-md mx-auto'>
           <CtaCapture
             icon={CreditCard}
             link='/capture-id-options'
