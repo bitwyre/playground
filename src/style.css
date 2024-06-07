@@ -1,12 +1,15 @@
-* {
-  padding: 0;
-  box-sizing: border-box;
-  margin: 0;
-  height: 100%;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.board-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@layer base {
+  h1,
+  h2,
+  h3 {
+    @apply text-slate-50;
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
 }
