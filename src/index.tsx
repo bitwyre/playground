@@ -1,10 +1,9 @@
 import { render } from 'preact';
 import { LocationProvider, Router, Route } from 'preact-iso';
-import { Header } from './components/Header.jsx';
 import {
-  CaptureId,
-  CaptureIdOptions,
-  CaptureIdResultPreview,
+  CaptureDocument,
+  CaptureDocumentOptions,
+  CaptureDocumentResultPreview,
   CaptureLiveness,
   CaptureSelfie,
   FaceVerificationOnboarding,
@@ -20,11 +19,17 @@ export function App() {
       <main className='bg-slate-950 text-slate-400'>
         <Router>
           <Route path='/' component={Onboarding} />
-          <Route path='/capture-id-options' component={CaptureIdOptions} />
-          <Route path='/capture-id/:idType' component={CaptureId} />
           <Route
-            path='/capture-id/:idType/result-preview'
-            component={CaptureIdResultPreview}
+            path='/capture-document-options'
+            component={CaptureDocumentOptions}
+          />
+          <Route
+            path='/capture-document/:documentType'
+            component={CaptureDocument}
+          />
+          <Route
+            path='/capture-document/:documentType/result-preview'
+            component={CaptureDocumentResultPreview}
           />
           <Route
             path='/face-verification-onboarding'

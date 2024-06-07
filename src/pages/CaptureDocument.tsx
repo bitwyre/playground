@@ -1,14 +1,14 @@
 import { useState } from 'preact/hooks';
-import { useLocation } from 'preact-iso';
 import { Capture, Container } from '../components';
+import { useLocation } from 'preact-iso';
 
-export const CaptureSelfie = () => {
-  const { route } = useLocation();
+export const CaptureDocument = () => {
+  const { url, route } = useLocation();
 
   const [image, setImage] = useState<string | null>(null);
 
   const onSubmit = () => {
-    route('/verification-completed');
+    route(url + '/result-preview');
   };
 
   return (

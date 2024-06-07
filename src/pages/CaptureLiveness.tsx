@@ -1,3 +1,11 @@
+import { Capture, Container } from '../components';
+
 export const CaptureLiveness = () => {
-  return <div>CaptureLiveness</div>;
+  return (
+    <section>
+      <Container>
+        <Capture />
+      </Container>
+    </section>
+  );
 };

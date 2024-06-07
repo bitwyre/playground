@@ -4,7 +4,7 @@ import { Container, CopyText, CtaCapture } from '../components';
 export const Onboarding = () => {
   return (
     <section>
-      <Container className='flex flex-col justify-center items-center'>
+      <Container>
         <CopyText
           heading="Let's Verify KYC"
           subheading='Please submit the following documents to verify your identity'
@@ -14,10 +14,10 @@ export const Onboarding = () => {
           height={140}
           className='text-slate-50 mx-auto my-12 md:my-16'
         />
-        <div className='grid gap-4 max-w-md mx-auto'>
+        <div className='grid gap-3 max-w-md mx-auto'>
           <CtaCapture
             icon={CreditCard}
-            link='/capture-id-options'
+            link='/capture-document-options'
             text='Take a picture of your valid ID'
             subtext='To check your personal informations are correct'
           />
@@ -28,12 +28,12 @@ export const Onboarding = () => {
             subtext='To check your face to your ID picture'
           />
         </div>
-          <button
-            type='button'
-            className='text-sm text-center fixed left-1/2 bottom-4 -translate-x-1/2 hover:text-slate-50'
-          >
-            Why is this needed?
-          </button>
+        <button
+          type='button'
+          className='text-sm text-center fixed left-1/2 bottom-4 -translate-x-1/2 hover:text-slate-50'
+        >
+          Why is this needed?
+        </button>
       </Container>
     </section>
   );
