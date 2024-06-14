@@ -3,13 +3,23 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    background-color: #040a11;
+    color: #9d9d9d;
+    background: #040a11 url('./assets/bg-pattern.png') no-repeat center/cover;
+
+    @media screen and (min-width: 600px) {
+      background: #040a11;
+    }
+  }
+
   h1,
   h2,
   h3 {
-    @apply text-slate-50;
+    @apply text-white;
   }
 
   h1 {
-    @apply text-4xl font-bold;
+    @apply font-bold text-[40px];
   }
 }

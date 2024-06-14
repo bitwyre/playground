@@ -19,9 +19,11 @@ export const ButtonLink = ({
   onClick,
 }: ButtonLinkProps) => {
   const buttonLinkStyles = cn(
-    'h-11 grid place-items-center rounded-xl w-full',
-    { 'bg-blue-800 text-slate-50 hover:bg-blue-600': variant === 'primary' },
-    { 'bg-transparent border border-slate-800 ': variant === 'ghost' },
+    'h-11 grid place-items-center rounded-xl w-full font-bold text-white',
+    {
+      'bg-gradient-to-r from-blue-500 to-blue-700': variant === 'primary',
+    },
+    { 'bg-transparent border border-zinc-500': variant === 'ghost' },
     className
   );
 

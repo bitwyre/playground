@@ -16,7 +16,7 @@ import './style.css';
 export function App() {
   return (
     <LocationProvider>
-      <main className='bg-slate-950 text-slate-400'>
+      <main>
         <Router>
           <Route path='/' component={Onboarding} />
           <Route

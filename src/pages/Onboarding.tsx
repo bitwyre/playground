@@ -1,28 +1,31 @@
-import { Camera, CreditCard, ScanFace } from 'lucide-preact';
-import { Container, CopyText, CtaCapture } from '../components';
+import { ButtonClose, Container, CopyText, CtaCapture } from '../components';
+import OnboardingImage from '../assets/onboarding-image.png';
+import CardImage from '../assets/id-card.png';
+import CameraImage from '../assets/camera.png';
 
 export const Onboarding = () => {
   return (
     <section>
       <Container>
+        <ButtonClose className='fixed top-[19px] left-[17px]' />
         <CopyText
-          heading="Let's Verify KYC"
-          subheading='Please submit the following documents to verify your identity'
+          heading="Let's verify KYC"
+          subheading='Please submit the following documents to verify&nbsp;your&nbsp;identity'
         />
-        <ScanFace
-          width={140}
-          height={140}
-          className='text-slate-50 mx-auto my-12 md:my-16'
+        <img
+          src={OnboardingImage}
+          alt='Onboarding image'
+          className='mt-12 mb-8'
         />
         <div className='grid gap-3 max-w-md mx-auto'>
           <CtaCapture
-            icon={CreditCard}
+            image={CardImage}
             link='/capture-document-options'
             text='Take a picture of your valid ID'
             subtext='To check your personal informations are correct'
           />
           <CtaCapture
-            icon={Camera}
+            image={CameraImage}
             link='/capture-selfie'
             text='Take a selfie'
             subtext='To check your face to your ID picture'
@@ -30,7 +33,7 @@ export const Onboarding = () => {
         </div>
         <button
           type='button'
-          className='text-sm text-center fixed left-1/2 bottom-4 -translate-x-1/2 hover:text-slate-50'
+          className='text-sm fixed right-4 bottom-5 hover:text-slate-50 underline hover:no-underline'
         >
           Why is this needed?
         </button>

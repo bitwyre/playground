@@ -15,7 +15,7 @@ export const FormField: FunctionComponent<FormFieldProps> = ({
   return (
     <div>
       <div className={cn('space-y-2', disabled ? 'opacity-55' : '')}>
-        <label htmlFor={name} className='text-slate-50 font-medium'>
+        <label htmlFor={name} className='text-white font-medium'>
           {label}
         </label>
         <input
@@ -24,7 +24,7 @@ export const FormField: FunctionComponent<FormFieldProps> = ({
           defaultValue={defaultValue}
           placeholder={placeholder}
           {...register(name)}
-          className='w-full bg-slate-900 border border-slate-400 py-2 px-3 text-slate-50 rounded-lg'
+          className='w-full bg-[#040A11] border border-white py-2 px-3 text-white rounded-lg'
           disabled={disabled}
         />
       </div>

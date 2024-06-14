@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { FormData } from '../types';
-import { FormField } from '../components';
+import { ButtonLink, FormField } from '../components';
 import { useLocation } from 'preact-iso';
 
 export const Form = () => {
@@ -113,12 +113,7 @@ export const Form = () => {
         register={register}
         error={errors.postCode}
       />
-      <button
-        type='submit'
-        className='w-full bg-blue-800 text-white text-lg font-medium uppercase h-12 rounded-xl hover:bg-blue-600'
-      >
-        Submit
-      </button>
+      <ButtonLink type='submit'>Submit</ButtonLink>
     </form>
   );
 };

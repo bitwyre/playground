@@ -1,35 +1,45 @@
-import { CreditCard, File, FileText, UserRound } from "lucide-preact";
-import { Container, CopyText, CtaCapture } from "../components";
+import { CreditCard, File, FileText, UserRound } from 'lucide-preact';
+import { ButtonClose, Container, CopyText, CtaCapture } from '../components';
+import OnboardingImage from '../assets/onboarding-image.png';
+import CardImage from '../assets/id-card.png';
+import PassportImage from '../assets/passport.png';
 
 export const CaptureDocumentOptions = () => {
   return (
     <section>
       <Container>
+        <ButtonClose className='fixed top-[19px] left-[17px]' />
         <CopyText
           heading='Upload proof of your identity'
-          subheading='Choose the document type you wish to submit'
+          subheading='Choose a document you wish to submit'
         />
-        <UserRound
-          width={140}
-          height={140}
-          className='text-slate-50 mx-auto my-12'
+        <img
+          src={OnboardingImage}
+          alt='Onboarding image'
+          className='mt-12 mb-8'
         />
         <div className='grid gap-3 max-w-md mx-auto'>
           <CtaCapture
             link='/capture-document/id-card'
-            icon={CreditCard}
+            image={CardImage}
             text='ID Card'
+            className='w-80'
           />
-          <CtaCapture link='/capture-document/passport' icon={File} text='Passport' />
           <CtaCapture
-            link='/capture-document/driver-license'
-            icon={FileText}
-            text='Driver License'
+            link='/capture-document/passport'
+            image={PassportImage}
+            text='Passport'
+            className='py-2 md:py-4'
+          />
+          <CtaCapture
+            link='/capture-document/driving-license'
+            image={CardImage}
+            text='Driving License'
           />
         </div>
         <a
           href='#'
-          className='text-sm text-center fixed left-1/2 bottom-4 -translate-x-1/2 hover:text-slate-50'
+          className='text-sm fixed right-4 bottom-5 hover:text-slate-50 underline hover:no-underline'
         >
           Need help?
         </a>

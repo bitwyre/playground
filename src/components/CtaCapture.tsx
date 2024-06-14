@@ -1,26 +1,35 @@
-import { ChevronRight, LucideIcon } from 'lucide-preact';
+import { ChevronRight } from 'lucide-preact';
+import { cn } from '../utils/cn';
 
 type CtaCaptureProps = {
   link: string;
-  icon: LucideIcon;
+  image: string;
   text: string;
   subtext?: string;
+  className?: string;
 };
 
-export const CtaCapture = ({ link, icon, text, subtext }: CtaCaptureProps) => {
-  const Icon = icon;
-
+export const CtaCapture = ({
+  link,
+  image,
+  text,
+  subtext,
+  className,
+}: CtaCaptureProps) => {
   return (
     <a
       href={link}
-      className='grid grid-cols-[auto_1fr_auto] gap-3 items-center border border-slate-800 px-3 py-2 bg-slate-950 hover:bg-slate-900 hover:shadow-2xl rounded-xl md:gap-4 md:px-4 md:py-3 w-full'
+      className={cn(
+        'grid grid-cols-[auto_1fr_auto] gap-4 items-center border border-zinc-400 bg-[#040A11] hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-700 hover:border-transparent hover:shadow-2xl rounded-xl md:gap-4 px-3 py-4 md:px-5 md:py-6 hover:text-white',
+        className
+      )}
     >
-      <Icon width={30} height={30} className='text-slate-50' />
+      <img src={image} alt='image icon' />
       <div>
-        <p className='font-medium text-slate-50 md:text-lg'>{text}</p>
+        <p className='font-medium text-white md:text-lg'>{text}</p>
         <p className='text-sm'>{subtext}</p>
       </div>
-      <ChevronRight width={18} height={18} />
+      <ChevronRight width={24} height={24} />
     </a>
   );
 };

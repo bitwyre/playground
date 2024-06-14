@@ -1,20 +1,24 @@
 import { CircleUserRound } from 'lucide-preact';
-import { ButtonLink, Container, CopyText } from '../components';
+import { ButtonClose, ButtonLink, Container, CopyText } from '../components';
+
+import FaceVerificationImage from '../assets/face-verification-image.png';
 
 export const FaceVerificationOnboarding = () => {
   return (
     <section>
       <Container>
+        <ButtonClose link='/' className='fixed top-[19px] left-[17px]' />
         <CopyText
           heading='Face Verification'
           subheading="This step is required to prove that it's you"
+          className='space-y-0'
         />
-        <CircleUserRound
-          width={130}
-          height={130}
-          className='text-slate-50 my-12'
+        <img
+          src={FaceVerificationImage}
+          alt='Face verifiaction illustration'
+          className='my-6'
         />
-        <ol className='text-center text-slate-50 font-medium text-lg space-y-1'>
+        <ol className='text-center text-slate-50 font-bold space-y-1'>
           <li>Keep enough lighting</li>
           <li>Keep face inside the rectangle</li>
           <li>Please folloe the instructions</li>
@@ -22,18 +26,24 @@ export const FaceVerificationOnboarding = () => {
         <div className='w-full max-w-64 space-y-3 mt-8'>
           <ButtonLink
             link='/capture-selfie'
-            className='bg-blue-800 text-slate-50 h-11 grid place-items-center rounded-xl w-full'
+            className='h-11 grid place-items-center rounded-xl w-full'
           >
             Open camera
           </ButtonLink>
           <ButtonLink
             link='/capture-document/id-card/result-preview'
             variant='ghost'
-            className='bg-transparent border border-slate-800 h-11 grid place-items-center rounded-xl w-full'
+            className='h-11 grid place-items-center rounded-xl w-full'
           >
             Back
           </ButtonLink>
         </div>
+        <a
+          href='#'
+          className='text-sm fixed right-4 bottom-5 hover:text-slate-50 underline hover:no-underline'
+        >
+          Need help?
+        </a>
       </Container>
     </section>
   );
